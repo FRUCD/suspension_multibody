@@ -14,6 +14,9 @@ func_name = mfilename;
 func_path = regexprep(func_path, strcat(func_name, "$"), '');
 SPMB_path = strcat(func_path, "../");
 run_folder_path = strcat(SPMB_path, "run_folder/");
+if(~exist(run_folder_path, 'dir'))
+    mkdir(run_folder_path)
+end
 cd(run_folder_path);
 
 % load data into model file. this stops it looking in the main workspace,
