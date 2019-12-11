@@ -7,6 +7,7 @@ classdef F_sim_control_Cl < sim_control_Cl
         roll_test (1,1) F_roll_test_Cl;
         steer_test (1,1) steer_test_Cl;
         steer_roll_test (1,1) steer_roll_test_Cl;
+        lateral_load_case (1,1) F_lateral_load_case_Cl;
     end
     
     %% variant subsystem configuration
