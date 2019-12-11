@@ -33,7 +33,6 @@ function steer_roll_graphs(SP, out)
     steer_diff_grid = zeros(rack_sweep_n_pt, roll_sweep_n_pt);
     ackermann_percent_grid = zeros(rack_sweep_n_pt, roll_sweep_n_pt);
     ackermann_diff_grid = zeros(rack_sweep_n_pt, roll_sweep_n_pt);
-    misalign_grid = zeros(rack_sweep_n_pt, roll_sweep_n_pt);
     for i = 1:roll_sweep_n_pt
         for j = 1:rack_sweep_n_pt
             camber_grid(i,j) = ...
