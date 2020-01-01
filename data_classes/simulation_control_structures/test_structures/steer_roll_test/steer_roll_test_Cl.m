@@ -18,7 +18,6 @@ classdef steer_roll_test_Cl < F_base_test_Cl
     %% step, ramp, hold, and backtrack times
     properties (Dependent)
         t_step (1,1) double {is_time}; % (s)
-        t_ramp (1,1) double {is_time}; % (s)
         t_hold (1,1) double {is_time}; % (s)
         t_backtrack (1,1) double {is_time}; % (s)
     end
