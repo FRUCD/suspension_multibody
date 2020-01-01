@@ -11,7 +11,6 @@ classdef R_roll_test_Cl < R_base_test_Cl
     properties (Dependent)
         ride_input timeseries;
         roll_input timeseries;
-        rack_input timeseries;
         L_jounce_input timeseries;
         R_jounce_input timeseries;
     end
@@ -22,9 +21,6 @@ classdef R_roll_test_Cl < R_base_test_Cl
             out = timeseries(0,0);
         end
         function out = get.roll_input(obj) %#ok<MANU>
-            out = timeseries(0,0);
-        end
-        function out = get.rack_input(obj) %#ok<MANU>
             out = timeseries(0,0);
         end
         function out = get.L_jounce_input(obj)

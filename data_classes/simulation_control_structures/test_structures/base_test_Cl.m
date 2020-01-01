@@ -13,14 +13,14 @@ classdef (Abstract) base_test_Cl
     properties
         t_end (1,1) double {is_time} = 1; % (s)
         dt_max (1,1) double {is_time} = 0.01; % (s)
-        dt_min (1,1) double {is_time} = 0.001; % (s)
+        dt_min (1,1) double {is_time} = 0.0002; % (s)
     end
     
     %% input timeseries
     properties (Abstract)
         ride_input timeseries;
         roll_input timeseries;
-        rack_input timeseries;
+        %rack_input timeseries;
         L_jounce_input timeseries;
         R_jounce_input timeseries;
     end

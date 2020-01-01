@@ -25,7 +25,6 @@ classdef sim_control_Cl
     properties (Dependent)
         ride_input timeseries;
         roll_input timeseries;
-        rack_input timeseries;
         L_jounce_input timeseries;
         R_jounce_input timeseries;
     end
@@ -63,13 +62,6 @@ classdef sim_control_Cl
         function out = get.roll_input(obj)
              try
                  out = obj.(obj.current_test).roll_input;
-             catch
-                 out = timeseries(0,0);
-             end
-        end
-        function out = get.rack_input(obj)
-             try
-                 out = obj.(obj.current_test).rack_input;
              catch
                  out = timeseries(0,0);
              end

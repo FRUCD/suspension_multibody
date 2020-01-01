@@ -37,13 +37,28 @@ classdef F_sim_control_Cl < sim_control_Cl
         end
     end
     
+    %% input timeseries
+    properties (Dependent)
+        rack_input timeseries;
+    end
+    
     %% grab inputs from a test structure depending on the current mode
     methods
+        function out = get.rack_input(obj)
+             try
+                 out = obj.(obj.current_test).rack_input;
+             catch
+                 out = timeseries(0,0);
+             end
+        end
         function out = get.VS_modes(obj)
              try
                  out = obj.(obj.current_test).VS_modes;
              catch
-                 out = "Error: shit's fucked";
+                 out = F_VS_mode_Cl;
+                 out.rack = "Error: shit's fucked";
+                 out.CH = "Error: shit's fucked";
+                 out.jounce = "Error: shit's fucked";
              end
         end
     end

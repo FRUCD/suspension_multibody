@@ -28,7 +28,10 @@ classdef R_sim_control_Cl < sim_control_Cl
              try
                  out = obj.(obj.current_test).VS_modes;
              catch
-                 out = "Error: shit's fucked";
+                 out = R_VS_mode_Cl;
+                 out.rack = "Error: shit's fucked";
+                 out.CH = "Error: shit's fucked";
+                 out.jounce = "Error: shit's fucked";
              end
         end
     end
