@@ -62,7 +62,7 @@ classdef SP_Cl
 
     %% auto-calculation functions
     methods
-        function F_AC_geometry(obj)
+        function obj = F_AC_geometry(obj)
             %% general comments
             % this function automatically calculates all link and control
             % arm lengths and motion ratio arrays for the front suspension.
@@ -455,7 +455,7 @@ classdef SP_Cl
             obj.F.SY.MR_array = SY.MR_array';
             
         end
-        function F_AC_dynamics(obj, varargin)
+        function obj = F_AC_dynamics(obj, varargin)
             %% check for right number of inputs
             if ~(length(varargin) == 1 || length(varargin) == 3)
                 error("Wrong number of mode arguments (either 1 or 3)");
@@ -642,7 +642,7 @@ classdef SP_Cl
                 SY.static_spring_compression - SY.lower_travel;
             
         end
-        function R_AC_geometry(obj)
+        function obj = R_AC_geometry(obj)
             %% general comments
             % this function automatically calculates all link and control
             % arm lengths and motion ratio arrays for the front suspension.
@@ -1032,7 +1032,7 @@ classdef SP_Cl
             obj.R.SY.MR_array = SY.MR_array';
             
         end
-        function R_AC_dynamics(obj, varargin)
+        function obj = R_AC_dynamics(obj, varargin)
             %% check for right number of inputs
             if ~(length(varargin) == 1 || length(varargin) == 3)
                 error("Wrong number of mode arguments (either 1 or 3)");
