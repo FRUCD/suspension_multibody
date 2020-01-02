@@ -4,16 +4,15 @@ classdef R_end_Cl < end_Cl
     
     %% design parameters
     properties
-        SY (1,1) end_SY_parameters_Cl;
+        SY (1,1) R_end_SY_parameters_Cl;
         CH (1,1) R_CH_parameters_Cl;
         UA (1,1) R_UA_parameters_Cl;
-        LA (1,1) LA_parameters_Cl;
+        LA (1,1) R_LA_parameters_Cl;
+        TL (1,1) R_TL_parameters_Cl;
+        SH (1,1) R_SH_parameters_Cl;
+        RA (1,1) R_RA_parameters_Cl;
+        PR (1,1) R_PR_parameters_Cl;
+        WP (1,1) R_WP_parameters_Cl;
     end
     
-    %% simulation control structure
-    %{
-    properties
-        SC (1,1) F_sim_control_Cl;
-    end
-    %}
 end
