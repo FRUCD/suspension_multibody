@@ -2,6 +2,11 @@ classdef SP_Cl
     %% SP_CL Suspension Parameters Class
     %   contains data on suspension design
     
+    %% copyright field
+    properties
+        COPYRIGHT (1,1) string;
+    end
+    
     %% general design parameters (gravity, wheelbase)
     properties
         G (1,1) general_SY_parameters_Cl;
